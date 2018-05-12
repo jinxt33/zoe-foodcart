@@ -1,10 +1,17 @@
 .jumbotron.left {
-  background-color: #E8DABB;
+  background-color: #D4FA00;
+  color: black;
 }
 
 .jumbotron {
   margin-top: 33px;
-  padding: 15px;
-  background-color: #D4FA00;
+  padding-top: 33px;
+  padding-bottom: 15px;
+  background-color: #2E2E2E;
+  color: white;
+}
 
+img {
+  padding: 15px;
+  width: 33%;
 }
