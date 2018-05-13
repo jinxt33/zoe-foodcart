@@ -14,6 +14,12 @@
   visibility: visible;
 }
 
+.jumbotron.byo {
+  background-color: #6600A9;
+  color: white;
+  padding-bottom: 33px;
+}
+
 .jumbotron.classics {
   background-color: #F2FF5A;
   color: black;
@@ -26,4 +32,22 @@
   padding-bottom: 15px;
   background-color: #2E2E2E;
   color: white;
+}
+
+ol ul li {
+  padding-top: 0px;
+  padding-bottom: 10px;
+  float: left;
+  width: 33%;
+}
+
+ol li {
+    padding-top: 33px;
+}
+
+ol {
+  padding-left: 7%;
+  padding-bottom: 33px;
+  font-size: 27px;
+  font-style: italic;
 }
