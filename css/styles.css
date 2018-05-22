@@ -1,16 +1,14 @@
-#classics img {
+.col-sm-4 img {
   padding: 15px;
-  width: 33%;
+  width: 100%;
 }
 
-#classics .text {
+.col-sm-4 .text {
   visibility: hidden;
-  width: 33%;
-  float: left;
   text-align: center;
 }
 
-#classics:hover .text {
+.col-sm-4:hover .text {
   visibility: visible;
 }
 
