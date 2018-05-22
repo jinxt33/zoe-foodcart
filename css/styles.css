@@ -55,3 +55,7 @@ ol {
 a {
   font-size: 23px;
 }
+
+body {
+  background: url("../imgs/baozi-bg.jpg") repeat-y;
+}
