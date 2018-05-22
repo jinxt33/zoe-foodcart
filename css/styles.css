@@ -12,6 +12,11 @@
   visibility: visible;
 }
 
+.jumbotron.footer {
+  background-color: #474747;
+  padding-bottom: 33px;
+}
+
 .jumbotron.byo {
   background-color: #6600A9;
   color: white;
@@ -21,13 +26,13 @@
 .jumbotron.classics {
   background-color: #F2FF5A;
   color: black;
-  padding-bottom: 33px;
+  padding-bottom: 15px;
 }
 
 .jumbotron {
   margin-top: 33px;
   padding-top: 33px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   background-color: #2E2E2E;
   color: white;
 }
@@ -51,7 +56,13 @@ ol {
 }
 
 a {
-  font-size: 23px;
+  font-size: 19px;
+  color: red;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 body {
