@@ -12,8 +12,33 @@
   visibility: visible;
 }
 
+.col-md-3 {
+  text-align: center;
+}
+
+.footer h2 {
+  margin-top: 0px;
+}
+
 .jumbotron.footer {
   background-color: #474747;
+}
+
+.jumbotron.follow {
+  background-color: pink;
+  color: #474747;
+  padding-bottom: 33px;
+}
+
+.jumbotron.contact {
+  background-color: #E9D5B5;
+  color: #474747;
+  padding-bottom: 33px;
+}
+
+.jumbotron.find {
+  background-color: lightblue;
+  color: #474747;
   padding-bottom: 33px;
 }
 
@@ -55,8 +80,15 @@ ol {
   font-style: italic;
 }
 
+.jumbotron hr {
+  border-top: 2px solid #474747;
+}
+
+h2 {
+  font-weight: bold;
+}
+
 a {
-  font-size: 19px;
   color: red;
 }
 
