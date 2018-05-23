@@ -14,4 +14,13 @@ $(document).ready(function() {
     $(".jumbotron.contact").hide();
     $(".jumbotron.find").hide();
   });
+  $("img.twitter").hover(function () {
+    $("p.twitter").fadeToggle();
+  });
+  $("img.instagram").hover(function () {
+    $("p.instagram").fadeToggle();
+  });
+  $("img.facebook").hover(function () {
+    $("p.facebook").fadeToggle();    
+  });
 });
