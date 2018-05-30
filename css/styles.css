@@ -3,13 +3,9 @@
   width: 100%;
 }
 
-.col-md-4 .text {
-  visibility: hidden;
+.col-md-4 p {
+  display: none;
   text-align: center;
-}
-
-.col-md-4:hover .text {
-  visibility: visible;
 }
 
 .col-md-3 {
@@ -74,15 +70,7 @@ form#contact {
   width: 70%;
 }
 
-p.twitter {
-  display: none;
-}
-
-p.instagram {
-  display: none;
-}
-
-p.facebook {
+p.thankyou {
   display: none;
 }
 
