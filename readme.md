@@ -1,12 +1,12 @@
 # ZOE'S BAOZI FOOD CART
 ## AN HTML, CSS & BOOTSTRAP DEMO
 
-#### First Epicodus Independent Project, last edited May 9th, 2018.
+#### Epicodus Independent Project, last edited May 29th, 2018.
 
 #### By Zoe Zhou
 
 ## Description
-This project showcases my understanding of what we've learned so far in class. It uses a variety of HTML tags, CSS tricks and even Bootstrap elements! I'm always dreaming about food and starting a lucrative BaoZi food cart business with my buddy Joe. This website is a peek into what that fantasy could be! Maybe one day I will translate this into the real world! Yasssss.
+This project showcases my understanding of what we've learned so far in class. It uses a variety of HTML tags, CSS tricks, Bootstrap elements and even Javascript / JQuery! I'm always dreaming about food and starting a lucrative BaoZi food cart business with my buddy Joe. This website is a peek into what that fantasy could be! Maybe one day I will translate this into the real world! Yasssss.
 
 ## Setup/Installation Requirements
 To clone this project, please follow these steps
@@ -22,7 +22,7 @@ None, it's perfect!
 If you have any questions, ideas and concerns please feel free to email me: <zoezo85@gmail.com>.
 
 ## Technologies Used
-This readme is written in Markdown. The webpages are written in simple HTML. Styled with CSS and Bootstrap.
+This readme is written in Markdown. The webpages are written in simple HTML. Styled with CSS and Bootstrap. Interactions by Javascript and JQuery!
 
 ### License
 MIT, code is free to use by anyone and we are not liable.
