@@ -70,6 +70,10 @@
   border-top: 2px solid #474747;
 }
 
+form#contact {
+  width: 70%;
+}
+
 p.twitter {
   display: none;
 }
