@@ -48,6 +48,7 @@ $(document).ready(function() {
   $("form#contact").submit(function(event) {
     event.preventDefault();
     $("p.thankyou").show();
+    $("form#contact").hide();
   });
 
 });
