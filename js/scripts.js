@@ -47,8 +47,8 @@ $(document).ready(function() {
 
   $("form#contact").submit(function(event) {
     event.preventDefault();
+    $("form#contact").slideToggle();
     $("p.thankyou").show();
-    $("form#contact").hide();
   });
 
 });

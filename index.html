@@ -50,9 +50,123 @@
           <div class="jumbotron byo">
             <h2>BUILD YOUR OWN</h2>
             <hr>
-            <p>< js order form goes here ></p>
+            <div class="row" id="choices">
+              <div class="row">
+                <div class="col-md-1">
+                  <h1>1.</h1>
+                </div>
+                <div class="col-md-11"><br/>
+                  <h3>CHOOSE YOUR BUNS</h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="rice" value="option1"> Rice
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="taro" value="option2"> Taro
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="sesame" value="option3"> Sesame
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-md-1">
+                  <h1>2.</h1>
+                </div>
+                <div class="col-md-11"><br/>
+                  <h3>CHOOSE YOUR STUFFIN</h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Mushroom
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Pickled Veggies
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Bamboo
+                      </label>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Bokchoy
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Celery
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Egg
+                      </label>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Pork
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Shrimp
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Tofu
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-md-1">
+                  <h1>3.</h1>
+                </div>
+                <div class="col-md-11"><br/>
+                  <h3>CHOOSE YOUR SAUCES</h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox1" value="option1"> Sweet
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Spicy
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Garlic
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="jumbotron find" id="find">
+          <div class="jumbotron find">
             <h2>LOCATIONS</h2>
             <hr>
             <div class="row">
@@ -77,28 +191,23 @@
           <div class="jumbotron contact">
             <h2>SAY HELLO</h2>
             <hr>
-            <p class="thankyou"><em>Thank you for your interest! We will get back to you shortly.</em></p>
+            <p class="thankyou"><em><strong>Thank you for your interest! We will get back to you shortly.</strong></em></p>
             <form id="contact">
-              <div class="form-group">
+              <div class="form-group form-group-lg">
                 <label for="name">Your Name: </label>
                 <input id="name" class="form-control" type="text" required>
-              </div>
-              <div class="form-group">
+                <br/>
                 <label for="email">Your Email: </label>
                 <input id="email" class="form-control" type="email" required>
-              </div>
-              <div class="form-group">
+                <br/>
                 <label for="subject">Subject: </label>
                 <input id="subject" class="form-control" type="text" required>
-              </div>
-              <div class="form-group">
+                <br/>
                 <label for="message">Message: </label>
                 <textarea id="message" class="form-control" rows="4" required></textarea>
               </div>
-
-              <div>
+              <br/>
                 <button type="submit" class="btn btn-default">SEND!</button>
-              </div>
             </form>
           </div>
           <div class="jumbotron follow">
@@ -138,4 +247,4 @@
   </body>
 </html>
 
-// what's next: fix jumbotron resizing on hover show p. add js order form //
+<!--fix jumbotrons resizing on hover | hover over locations and bold text - js inject css | live price calculator | fancify contact form-->

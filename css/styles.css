@@ -1,3 +1,7 @@
+#choices {
+  padding-left: 30px;
+}
+
 .col-md-4 img, h2, p {
   padding: 15px;
   width: 100%;
@@ -45,7 +49,7 @@
 .jumbotron.byo {
   background-color: #6600A9;
   color: white;
-  padding-bottom: 33px;
+  padding-bottom: 55px;
 }
 
 .jumbotron.classics {
@@ -72,6 +76,7 @@ form#contact {
 
 p.thankyou {
   display: none;
+  color: red;
 }
 
 h2 {
