@@ -51,4 +51,21 @@ $(document).ready(function() {
     $("p.thankyou").show();
   });
 
+  $("form#byo").submit(function(event) {
+    event.preventDefault();
+
+    var bunsTotal = parseInt($("#rice").val())+parseInt($("#taro").val())+parseInt($("#sesame").val());
+    var extrasTotal = parseInt($("#mushroom").val())+parseInt($("#veggies").val())+parseInt($("#bamboo").val())+parseInt($("#bokchoy").val())+parseInt($("#celery").val())+parseInt($("#egg").val());
+    var proteinTotal = parseInt($("#pork").val())+parseInt($("#shrimp").val())+parseInt($("#tofu").val());
+    var saucesTotal = parseInt($("#sweet").val())+parseInt($("#spicy").val())+parseInt($("#garlicky").val());
+
+    console.log(bunsTotal);
+    console.log(proteinTotal);
+    console.log(extrasTotal);
+    console.log(saucesTotal);
+
+    $("span#total").empty();
+    $("span#total").append(bunsTotal + proteinTotal + extrasTotal + saucesTotal);
+  });
+
 });

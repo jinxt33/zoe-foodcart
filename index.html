@@ -50,7 +50,7 @@
           <div class="jumbotron byo">
             <h2>BUILD YOUR OWN</h2>
             <hr>
-            <div class="row" id="choices">
+            <form id="byo">
               <div class="row">
                 <div class="col-md-1">
                   <h1>1.</h1>
@@ -60,129 +60,141 @@
                   <div class="row">
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="rice" value="option1"> Rice
+                        <input type="checkbox" id="rice" value="1"> Rice
                       </label>
                     </div>
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="taro" value="option2"> Taro
+                        <input type="checkbox" id="taro" value="1"> Taro
                       </label>
                     </div>
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="sesame" value="option3"> Sesame
+                        <input type="checkbox" id="sesame" value="1"> Sesame
                       </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <br/>
               <div class="row">
                 <div class="col-md-1">
                   <h1>2.</h1>
                 </div>
                 <div class="col-md-11"><br/>
-                  <h3>CHOOSE YOUR STUFFIN</h3>
+                  <h3>CHOOSE YOUR PROTEIN</h3>
                   <div class="row">
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Mushroom
+                        <input type="checkbox" id="pork" value="1"> Pork
                       </label>
                     </div>
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Pickled Veggies
+                        <input type="checkbox" id="shrimp" value="1.5"> Shrimp
                       </label>
                     </div>
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Bamboo
-                      </label>
-                    </div>
-                  </div>
-                  <br/>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Bokchoy
-                      </label>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Celery
-                      </label>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Egg
-                      </label>
-                    </div>
-                  </div>
-                  <br/>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Pork
-                      </label>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Shrimp
-                      </label>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Tofu
+                        <input type="checkbox" id="tofu" value="0.5"> Tofu
                       </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <br/>
               <div class="row">
                 <div class="col-md-1">
                   <h1>3.</h1>
+                </div>
+                <div class="col-md-11"><br/>
+                  <h3>CHOOSE YOUR EXTRAS</h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="mushroom" value="0.5"> Mushroom
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="veggies" value="0.5"> Pickled Veggies
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="bamboo" value="0.5"> Bamboo
+                      </label>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="bokchoy" value="0.5"> Bokchoy
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="celery" value="0.5"> Celery
+                      </label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="egg" value="0.5"> Egg
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <h1>4.</h1>
                 </div>
                 <div class="col-md-11"><br/>
                   <h3>CHOOSE YOUR SAUCES</h3>
                   <div class="row">
                     <div class="col-md-4">
                         <label class="checkbox-inline">
-                          <input type="checkbox" id="inlineCheckbox1" value="option1"> Sweet
+                          <input type="checkbox" id="sweet" value="0.2"> Sweet
                         </label>
                     </div>
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Spicy
+                        <input type="checkbox" id="spicy" value="0.2"> Spicy
                       </label>
                     </div>
                     <div class="col-md-4">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Garlic
+                        <input type="checkbox" id="garlicky" value="0.2"> Garlicky
                       </label>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <br/>
+              <button type="submit" class="btn btn-default">I HAVE MADE MY CHOICES, NO REGRETS</button>
+            </form>
+          </div>
+          <div class="jumbotron total">
+            <h2>TOTAL</h2>
+            <hr>
+            <h3>That'll be: $<span id="total"></span></h3>
           </div>
           <div class="jumbotron find">
             <h2>LOCATIONS</h2>
             <hr>
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 sw">
                 <h4>SOUTHWEST</h4>
                 <p>3601 SW River Pkwy<br/>Portland, OR 97239</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 nw">
                 <h4>NORTHWEST</h4>
                 <p>707 NW 19th Ave<br/>Portland, OR 97209</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 se">
                 <h4>SOUTHEAST</h4>
                 <p>1711 SE 33rd Ave<br/>Portland, OR 97214</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 ne">
                 <h4>NORTHEAST</h4>
                 <p>422 NE 65th Ave<br/>Portland, OR 97213</p>
               </div>
@@ -193,7 +205,7 @@
             <hr>
             <p class="thankyou"><em><strong>Thank you for your interest! We will get back to you shortly.</strong></em></p>
             <form id="contact">
-              <div class="form-group form-group-lg">
+              <div class="form-group">
                 <label for="name">Your Name: </label>
                 <input id="name" class="form-control" type="text" required>
                 <br/>
@@ -247,4 +259,4 @@
   </body>
 </html>
 
-<!--fix jumbotrons resizing on hover | hover over locations and bold text - js inject css | live price calculator | fancify contact form-->
+<!--fix jumbotrons resizing on hover | hover over locations and bold text - js inject css | live price calculator | if else if else logic | fix value calculations | fancify contact form-->
