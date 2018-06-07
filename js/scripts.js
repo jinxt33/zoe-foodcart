@@ -54,10 +54,10 @@ $(document).ready(function() {
   $("form#byo").submit(function(event) {
     event.preventDefault();
 
-    var bunsTotal = parseInt($("#rice").val())+parseInt($("#taro").val())+parseInt($("#sesame").val());
-    var extrasTotal = parseInt($("#mushroom").val())+parseInt($("#veggies").val())+parseInt($("#bamboo").val())+parseInt($("#bokchoy").val())+parseInt($("#celery").val())+parseInt($("#egg").val());
-    var proteinTotal = parseInt($("#pork").val())+parseInt($("#shrimp").val())+parseInt($("#tofu").val());
-    var saucesTotal = parseInt($("#sweet").val())+parseInt($("#spicy").val())+parseInt($("#garlicky").val());
+    var bunsTotal = parseFloat($("input:radio[name=bun]:checked").val());
+    var extrasTotal = parseFloat($("#mushroom:checked").val()) + parseFloat($("#veggies:checked").val()) + parseFloat($("#bamboo:checked").val()) + parseFloat($("#bokchoy:checked").val()) + parseFloat($("#celery:checked").val()) + parseFloat($("#egg:checked").val());
+    var proteinTotal = parseFloat($("input:radio[name=protein]:checked").val());
+    var saucesTotal = parseFloat($("input:radio[name=sauce]:checked").val());
 
     console.log(bunsTotal);
     console.log(proteinTotal);
