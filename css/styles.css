@@ -40,6 +40,7 @@
 }
 
 .jumbotron.total h3 {
+  display: none;
   padding-left: 20px;
 }
 
@@ -83,6 +84,10 @@ form#contact {
 
 p.thankyou {
   display: none;
+  color: red;
+}
+
+h3#hungrtiger {
   color: red;
 }
 

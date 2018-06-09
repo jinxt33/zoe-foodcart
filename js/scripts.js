@@ -51,21 +51,38 @@ $(document).ready(function() {
     $("p.thankyou").show();
   });
 
+  function xNan (v) {
+    if ( v == null ) {
+      return 0;
+    }
+    return v;
+  }
+
+  var bunsTotal;
+  var extrasTotal;
+  var proteinTotal;
+  var saucesTotal;
+
   $("form#byo").submit(function(event) {
     event.preventDefault();
 
-    var bunsTotal = parseFloat($("input:radio[name=bun]:checked").val());
-    var extrasTotal = parseFloat($("#mushroom:checked").val()) + parseFloat($("#veggies:checked").val()) + parseFloat($("#bamboo:checked").val()) + parseFloat($("#bokchoy:checked").val()) + parseFloat($("#celery:checked").val()) + parseFloat($("#egg:checked").val());
-    var proteinTotal = parseFloat($("input:radio[name=protein]:checked").val());
-    var saucesTotal = parseFloat($("input:radio[name=sauce]:checked").val());
+    bunsTotal = parseFloat(xNan($("input:radio[name=bun]:checked").val()));
+    extrasTotal = parseFloat(xNan($("#mushroom:checked").val())) + parseFloat(xNan($("#veggies:checked").val())) + parseFloat(xNan($("#bamboo:checked").val())) + parseFloat(xNan($("#bokchoy:checked").val())) + parseFloat(xNan($("#celery:checked").val())) + parseFloat(xNan($("#egg:checked").val()));
+    proteinTotal = parseFloat(xNan($("input:radio[name=protein]:checked").val()));
+    saucesTotal = parseFloat(xNan($("input:radio[name=sauce]:checked").val()));
 
-    console.log(bunsTotal);
-    console.log(proteinTotal);
-    console.log(extrasTotal);
-    console.log(saucesTotal);
+    $("span#totalvalue").text(bunsTotal + proteinTotal + extrasTotal + saucesTotal);
+    $("h3#total").show();
 
-    $("span#total").empty();
-    $("span#total").append(bunsTotal + proteinTotal + extrasTotal + saucesTotal);
+    var total = bunsTotal + proteinTotal + extrasTotal + saucesTotal;
+
+    if (total <= 4.0) {
+      $("h3#fee").show();
+    } else if (total == 5.2) {
+      $("h3#hungrytiger").show();
+    } else {
+      $("h3#respect").show();
+    }
   });
 
 });
