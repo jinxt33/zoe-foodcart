@@ -77,10 +77,16 @@ $(document).ready(function() {
     var total = bunsTotal + proteinTotal + extrasTotal + saucesTotal;
 
     if (total <= 4.0) {
+      $("h3#hungrytiger").hide();
+      $("h3#respect").hide();
       $("h3#fee").show();
-    } else if (total == 5.2) {
+    } else if (total >= 5.2) {
+      $("h3#fee").hide();
+      $("h3#respect").hide();
       $("h3#hungrytiger").show();
     } else {
+      $("h3#hungrytiger").hide();
+      $("h3#fee").hide();
       $("h3#respect").show();
     }
   });
