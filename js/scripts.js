@@ -47,6 +47,12 @@ $(document).ready(function() {
 
   $("form#contact").submit(function(event) {
     event.preventDefault();
+
+    var name = $("input#name").val();
+
+    $("span#name").empty();
+    $("span#name").append(name);
+
     $("form#contact").slideToggle();
     $("p.thankyou").show();
   });
