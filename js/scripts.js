@@ -68,14 +68,18 @@ $(document).ready(function() {
   var extrasTotal;
   var proteinTotal;
   var saucesTotal;
+  // create arroy?
 
   $("form#byo").submit(function(event) {
     event.preventDefault();
 
-    bunsTotal = parseFloat(xNan($("input:radio[name=bun]:checked").val()));
     extrasTotal = parseFloat(xNan($("#mushroom:checked").val())) + parseFloat(xNan($("#veggies:checked").val())) + parseFloat(xNan($("#bamboo:checked").val())) + parseFloat(xNan($("#bokchoy:checked").val())) + parseFloat(xNan($("#celery:checked").val())) + parseFloat(xNan($("#egg:checked").val()));
+    // use for to clean up calculation of extrasTotal
+
+    bunsTotal = parseFloat(xNan($("input:radio[name=bun]:checked").val()));
     proteinTotal = parseFloat(xNan($("input:radio[name=protein]:checked").val()));
     saucesTotal = parseFloat(xNan($("input:radio[name=sauce]:checked").val()));
+    // use for to clean up calculations above
 
     $("span#totalvalue").text(bunsTotal + proteinTotal + extrasTotal + saucesTotal);
     $("h3#total").show();
@@ -95,6 +99,8 @@ $(document).ready(function() {
       $("h3#fee").hide();
       $("h3#respect").show();
     }
-  });
 
+  });
 });
+
+// separate business logic
