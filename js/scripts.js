@@ -12,21 +12,22 @@ baoZi.prototype.info = function() {
   return this.bunSel + " bao with " + this.proteinSel + ", " + this.extraSel + " glazed with " + this.sauceSel + " sauce.";
 }
 
-function xNan (v) {
+/*function xNan (v) {
   if ( v == null ) {
     return 0;
   }
   return v;
-}
+}*/
+
+
+var extras = [];
+var extrasTotal = 0;
 
 var bunsTotal;
-var extrasTotal;
 var proteinTotal;
 var saucesTotal;
 
 var total;
-
-var extrasArray = [];
 
 //USER INTERFACE LOGIC
 $(document).ready(function() {
@@ -35,18 +36,19 @@ $(document).ready(function() {
     event.preventDefault();
 
     $("input:checkbox[name=extras]:checked").each(function() {
-      var extrasName = $(this).text();
-      extrasArray.push(extrasName);
+      var extraName = $(this).text();
+      extrasTotal += parseFloat($(this).val());
+      extras.push(extraName);
+      console.log($(this).text());
     });
 
-    console.log(extrasArray);
+    console.log(extras);
 
-    extrasTotal = parseFloat(xNan($("#mushroom:checked").val())) + parseFloat(xNan($("#veggies:checked").val())) + parseFloat(xNan($("#bamboo:checked").val())) + parseFloat(xNan($("#bokchoy:checked").val())) + parseFloat(xNan($("#celery:checked").val())) + parseFloat(xNan($("#egg:checked").val()));
-    // use .each array to clean up above and replace the nan function in biz logic
+    /*extrasTotal = parseFloat(xNan($("#mushroom:checked").val())) + parseFloat(xNan($("#veggies:checked").val())) + parseFloat(xNan($("#bamboo:checked").val())) + parseFloat(xNan($("#bokchoy:checked").val())) + parseFloat(xNan($("#celery:checked").val())) + parseFloat(xNan($("#egg:checked").val()));*/
 
-    bunsTotal = parseFloat(xNan($("input:radio[name=bun]:checked").val()));
-    proteinTotal = parseFloat(xNan($("input:radio[name=protein]:checked").val()));
-    saucesTotal = parseFloat(xNan($("input:radio[name=sauce]:checked").val()));
+    bunsTotal = parseFloat($("input:radio[name=bun]:checked").val());
+    proteinTotal = parseFloat($("input:radio[name=protein]:checked").val());
+    saucesTotal = parseFloat($("input:radio[name=sauce]:checked").val());
 
     total = bunsTotal + proteinTotal + extrasTotal + saucesTotal;
 
