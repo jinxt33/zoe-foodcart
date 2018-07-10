@@ -39,13 +39,13 @@
   padding-bottom: 33px;
 }
 
-.jumbotron.total h3 {
-  display: none;
+.jumbotron.review h3 {
   color: red;
   padding-left: 20px;
 }
 
-.jumbotron.total {
+.jumbotron.review {
+  display: none;
   background-color: #8CFFD3;
   color: #474747;
   padding-bottom: 33px;
