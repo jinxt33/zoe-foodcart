@@ -1,15 +1,16 @@
 //BUSINESS LOGIC
 var name;
 
-function baoZi(bun, protein, extras, sauce) {
+function baoZi(bun, protein, extras, sauce, quantity) {
   this.bunSel = bun;
   this.proteinSel = protein;
   this.extrasSel = [extras];
   this.sauceSel = sauce;
+  this.quantitySel = quantity;
 }
 
 baoZi.prototype.info = function() {
-  return this.bunSel + " bao with " + this.proteinSel + ", " + this.extraSel + " glazed with " + this.sauceSel + " sauce.";
+  return this.quantitySel + "x " + this.bunSel + " bao with " + this.proteinSel + ", " + this.extraSel + " glazed with " + this.sauceSel + " sauce.";
 }
 
 /*function xNan (v) {
@@ -21,11 +22,12 @@ baoZi.prototype.info = function() {
 
 
 var extras = [];
-var extrasTotal = 0;
+var extrasTotal;
 
 var bunsTotal;
 var proteinTotal;
 var saucesTotal;
+var quantity;
 
 var total;
 
@@ -35,6 +37,8 @@ $(document).ready(function() {
   $("form#byo").submit(function(event) {
     event.preventDefault();
 
+    extras = [];
+    extrasTotal = 0;
     $("input:checkbox[name=extras]:checked").each(function() {
       var extraName = $(this).text();
       extrasTotal += parseFloat($(this).val());
@@ -44,15 +48,14 @@ $(document).ready(function() {
 
     console.log(extras);
 
-    /*extrasTotal = parseFloat(xNan($("#mushroom:checked").val())) + parseFloat(xNan($("#veggies:checked").val())) + parseFloat(xNan($("#bamboo:checked").val())) + parseFloat(xNan($("#bokchoy:checked").val())) + parseFloat(xNan($("#celery:checked").val())) + parseFloat(xNan($("#egg:checked").val()));*/
-
     bunsTotal = parseFloat($("input:radio[name=bun]:checked").val());
     proteinTotal = parseFloat($("input:radio[name=protein]:checked").val());
     saucesTotal = parseFloat($("input:radio[name=sauce]:checked").val());
+    quantity = parseInt($("#quantity").val());
 
-    total = bunsTotal + proteinTotal + extrasTotal + saucesTotal;
+    total = (bunsTotal + proteinTotal + extrasTotal + saucesTotal) * quantity;
 
-    $("span#totalvalue").text(total);
+    $("span#totalvalue").text(total.toPrecision(4));
     $(".jumbotron.review").slideDown();
     $("h3#total").show();
 
@@ -60,7 +63,7 @@ $(document).ready(function() {
       $("h3#hungrytiger").hide();
       $("h3#respect").hide();
       $("h3#fee").show();
-    } else if (total >= 5.2) {
+    } else if (total >= 13) {
       $("h3#fee").hide();
       $("h3#respect").hide();
       $("h3#hungrytiger").show();
