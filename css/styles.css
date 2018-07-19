@@ -80,6 +80,7 @@ form#byo {
 }
 
 form#contact {
+  padding-left: 50px;
   width: 70%;
 }
 
@@ -93,12 +94,11 @@ h2 {
 }
 
 a {
-  color: red;
+  color: orange !important;
 }
 
 a:hover {
-  color: white;
-  text-decoration: none;
+  color: lightblue !important;
 }
 
 body {
