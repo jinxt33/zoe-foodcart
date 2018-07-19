@@ -1,12 +1,12 @@
 # ZOE'S BAOZI FOOD CART
 ## A JAVASCRIPT, JQUERY, HTML, CSS & BOOTSTRAP DEMO
 
-#### Epicodus Independent Project, last edited June 10th, 2018.
+#### Epicodus Independent Project, last edited July 19th, 2018.
 
 #### By Zoe Zhou
 
 ## Description
-This project showcases my understanding of what we've learned so far in class. It uses a variety of HTML tags, CSS tricks, Bootstrap elements and even fancy Javascript & JQuery! I'm always dreaming about food and starting a lucrative BaoZi food cart business with my buddy Joe. This website is a peek into what that fantasy could be! Maybe one day I will translate this into the real world! Yasssss.
+This project showcases my understanding of what we've learned so far in class. It uses a variety of HTML tags, CSS tricks, Bootstrap elements, Javascript & JQuery fanciness! I'm always dreaming about food and starting a lucrative BaoZi food cart business with my buddy Joe. This website is a peek into what that fantasy could be! Maybe one day I will translate this into the real world! Yasssss.
 
 ## Setup/Installation Requirements
 To clone this project, please follow these steps
@@ -17,6 +17,7 @@ This project is now yours! Have fun!
 
 ## Known Bugs
 None, it's perfect! But its under construction and getting better all the time!
+Next up: Have the text over classic baozi static and placed in the center, make them clickable and adding to the live price calculator!
 
 ## Support and Contact Details
 If you have any questions, ideas and concerns please feel free to email me: <zoezo85@gmail.com>.
