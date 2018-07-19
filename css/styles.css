@@ -93,6 +93,10 @@ h2 {
   font-weight: bold;
 }
 
+h5 {
+  padding-left: 20px;
+}
+
 a {
   color: orange !important;
 }

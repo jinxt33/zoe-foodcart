@@ -6,23 +6,20 @@ var quantity;
 var total;
 
 function baoZi(bun, protein, extras, sauce, quantity) {
-  this.bunSel = bun;
-  this.proteinSel = protein;
-  this.extrasSel = extras;
-  this.sauceSel = sauce;
-  this.quantitySel = quantity;
+  this.bunName = bun;
+  this.proteinName = protein;
+  this.extrasName = extras;
+  this.sauceName = sauce;
+  this.quantityNumber = quantity;
 }
-
 baoZi.prototype.receipt = function() {
-  return this.quantitySel + "x " + this.bunSel + " bao with " + this.proteinSel + ", " + this.extraSel + " glazed with " + this.sauceSel + " sauce.";
+  return this.quantityNumber + "x " + this.bunName + " bao with " + this.proteinName + ", " + this.extrasName + " glazed in a " + this.sauceName + " sauce.";
 }
 
 //USER INTERFACE LOGIC
 $(document).ready(function() {
-
   $("form#byo").submit(function(event) {
     event.preventDefault();
-
     extras = [];
     extrasTotal = 0;
     $("input:checkbox[name=extras]:checked").each(function() {
@@ -30,38 +27,35 @@ $(document).ready(function() {
       extrasTotal += 0.25;
       extras.push(extraName);
     });
-
-    console.log(extras);
-
     var bun = $("input:radio[name=bun]:checked").val();
     var protein = $("input:radio[name=protein]:checked").val();
     var sauce = $("input:radio[name=sauce]:checked").val();
     quantity = parseInt($("#quantity").val());
+    var newBao = new baoZi(bun, protein, extras, sauce, quantity);
     total = (1 + 2 + extrasTotal) * quantity;
-    $("span#totalvalue").text(total.toPrecision(4));
+    $("h5#order").text(newBao.receipt());
+    $("span#totalvalue").text(total);
     $(".jumbotron.receipt").slideDown();
     $("h3#total").show();
 //CUSTOM MESSAGE BASED ON TOTAL ORDER VALUE
     if (total <= 4.0) {
-      $("h3#hungrytiger").hide();
-      $("h3#respect").hide();
-      $("h3#fee").show();
+      $("h5#hungrytiger").hide();
+      $("h5#respect").hide();
+      $("h5#fee").show();
     } else if (total >= 13) {
-      $("h3#fee").hide();
-      $("h3#respect").hide();
-      $("h3#hungrytiger").show();
+      $("h5#fee").hide();
+      $("h5#respect").hide();
+      $("h5#hungrytiger").show();
     } else {
-      $("h3#hungrytiger").hide();
-      $("h3#fee").hide();
-      $("h3#respect").show();
+      $("h5#hungrytiger").hide();
+      $("h5#fee").hide();
+      $("h5#respect").show();
     }
   });
 //CONTACT US FORM
   $("form#contact").submit(function(event) {
     event.preventDefault();
-
     name = $("input#name").val();
-
     $("span#name").text(name);
     $("form#contact").slideToggle();
     $("p.thankyou").show();
