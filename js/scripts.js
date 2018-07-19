@@ -1,35 +1,21 @@
 //BUSINESS LOGIC
 var name;
+var extras = [];
+var extrasTotal;
+var quantity;
+var total;
 
 function baoZi(bun, protein, extras, sauce, quantity) {
   this.bunSel = bun;
   this.proteinSel = protein;
-  this.extrasSel = [extras];
+  this.extrasSel = extras;
   this.sauceSel = sauce;
   this.quantitySel = quantity;
 }
 
-baoZi.prototype.info = function() {
+baoZi.prototype.receipt = function() {
   return this.quantitySel + "x " + this.bunSel + " bao with " + this.proteinSel + ", " + this.extraSel + " glazed with " + this.sauceSel + " sauce.";
 }
-
-/*function xNan (v) {
-  if ( v == null ) {
-    return 0;
-  }
-  return v;
-}*/
-
-
-var extras = [];
-var extrasTotal;
-
-var bunsTotal;
-var proteinTotal;
-var saucesTotal;
-var quantity;
-
-var total;
 
 //USER INTERFACE LOGIC
 $(document).ready(function() {
@@ -48,17 +34,20 @@ $(document).ready(function() {
 
     console.log(extras);
 
-    bunsTotal = parseFloat($("input:radio[name=bun]:checked").val());
-    proteinTotal = parseFloat($("input:radio[name=protein]:checked").val());
-    saucesTotal = parseFloat($("input:radio[name=sauce]:checked").val());
+    bun = $("input:radio[name=bun]:checked").val();
+    protein = $("input:radio[name=protein]:checked").val();
+    sauce = $("input:radio[name=sauce]:checked").val();
     quantity = parseInt($("#quantity").val());
 
-    total = (bunsTotal + proteinTotal + extrasTotal + saucesTotal) * quantity;
+    console.log(bun);
+    console.log(protein);
+    console.log(sauce);
 
+    total = (1 + 2 + extrasTotal) * quantity;
     $("span#totalvalue").text(total.toPrecision(4));
-    $(".jumbotron.review").slideDown();
+    $(".jumbotron.receipt").slideDown();
     $("h3#total").show();
-
+//CUSTOM MESSAGE BASED ON TOTAL ORDER VALUE
     if (total <= 4.0) {
       $("h3#hungrytiger").hide();
       $("h3#respect").hide();
@@ -73,7 +62,7 @@ $(document).ready(function() {
       $("h3#respect").show();
     }
   });
-
+//CONTACT US FORM
   $("form#contact").submit(function(event) {
     event.preventDefault();
 
@@ -83,7 +72,7 @@ $(document).ready(function() {
     $("form#contact").slideToggle();
     $("p.thankyou").show();
   });
-
+//CLASSIC BAOZI ANIMATIONS
   $("img.bz1").hover(function() {
     $("p.bz1").fadeToggle();
   });
@@ -102,7 +91,7 @@ $(document).ready(function() {
   $("img.bz6").hover(function() {
     $("p.bz6").fadeToggle();
   });
-
+//FOOTER LINKS ANIMATIONS
   $("a.find").click(function() {
     $(".jumbotron.find").slideToggle();
   });
@@ -112,7 +101,7 @@ $(document).ready(function() {
   $("a.follow").click(function() {
     $(".jumbotron.follow").slideToggle();
   });
-
+//SOCIAL MEDIA ANIMATIONS
   $("img.twitter").hover(function() {
     $("p.twitter").fadeToggle();
   });
@@ -122,5 +111,15 @@ $(document).ready(function() {
   $("img.facebook").hover(function() {
     $("p.facebook").fadeToggle();
   });
-
 });
+
+/*OLD STUFF TO REMEMBER
+
+function xNan (v) {
+  if ( v == null ) {
+    return 0;
+  }
+  return v;
+}
+
+*/

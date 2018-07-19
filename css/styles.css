@@ -39,12 +39,12 @@
   padding-bottom: 33px;
 }
 
-.jumbotron.review h3 {
+.jumbotron.receipt h3 {
   color: red;
   padding-left: 20px;
 }
 
-.jumbotron.review {
+.jumbotron.receipt {
   display: none;
   background-color: #8CFFD3;
   color: #474747;
