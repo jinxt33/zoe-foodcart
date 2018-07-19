@@ -26,23 +26,17 @@ $(document).ready(function() {
     extras = [];
     extrasTotal = 0;
     $("input:checkbox[name=extras]:checked").each(function() {
-      var extraName = $(this).text();
-      extrasTotal += parseFloat($(this).val());
+      var extraName = $(this).val();
+      extrasTotal += 0.25;
       extras.push(extraName);
-      console.log($(this).text());
     });
 
     console.log(extras);
 
-    bun = $("input:radio[name=bun]:checked").val();
-    protein = $("input:radio[name=protein]:checked").val();
-    sauce = $("input:radio[name=sauce]:checked").val();
+    var bun = $("input:radio[name=bun]:checked").val();
+    var protein = $("input:radio[name=protein]:checked").val();
+    var sauce = $("input:radio[name=sauce]:checked").val();
     quantity = parseInt($("#quantity").val());
-
-    console.log(bun);
-    console.log(protein);
-    console.log(sauce);
-
     total = (1 + 2 + extrasTotal) * quantity;
     $("span#totalvalue").text(total.toPrecision(4));
     $(".jumbotron.receipt").slideDown();
@@ -121,5 +115,7 @@ function xNan (v) {
   }
   return v;
 }
+
+extrasTotal += parseFloat($(this).val());
 
 */
