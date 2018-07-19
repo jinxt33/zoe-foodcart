@@ -61,6 +61,15 @@ $(document).ready(function() {
       $("h5#respect").show();
     }
   });
+//RESET ORDER
+  $(".btn.reset").click(function() {
+    $("ul#order").empty();
+    $(".jumbotron.receipt").slideUp();
+    $("h5#hungrytiger").hide();
+    $("h5#respect").hide();
+    $("h5#fee").hide();
+    total = 0;
+  });
 //CONTACT US FORM
   $("form#contact").submit(function(event) {
     event.preventDefault();
