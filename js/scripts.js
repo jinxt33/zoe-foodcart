@@ -3,7 +3,7 @@ var name;
 var extras = [];
 var extrasTotal;
 var quantity;
-var total;
+var total = 0;
 
 function baoZi(bun, protein, extras, sauce, quantity) {
   this.bunName = bun;
@@ -12,10 +12,16 @@ function baoZi(bun, protein, extras, sauce, quantity) {
   this.sauceName = sauce;
   this.quantityNumber = quantity;
 }
+function bzCost(extrasTotal, quantity) {
+  this.extrasCost = extrasTotal;
+  this.quantityNumber = quantity;
+}
 baoZi.prototype.receipt = function() {
   return this.quantityNumber + "x " + this.bunName + " bao with " + this.proteinName + ", " + this.extrasName + " glazed in a " + this.sauceName + " sauce.";
 }
-
+bzCost.prototype.cost = function() {
+  return (1 + 2 + extrasTotal)*quantity;
+}
 //USER INTERFACE LOGIC
 $(document).ready(function() {
   $("form#byo").submit(function(event) {
@@ -25,14 +31,15 @@ $(document).ready(function() {
     $("input:checkbox[name=extras]:checked").each(function() {
       var extraName = $(this).val();
       extrasTotal += 0.25;
-      extras.push(extraName);
+      extras.push(extraName + " ");
     });
     var bun = $("input:radio[name=bun]:checked").val();
     var protein = $("input:radio[name=protein]:checked").val();
     var sauce = $("input:radio[name=sauce]:checked").val();
     quantity = parseInt($("#quantity").val());
     var newBao = new baoZi(bun, protein, extras, sauce, quantity);
-    total = (1 + 2 + extrasTotal) * quantity;
+    var newCost = new bzCost(extrasTotal, quantity);
+    total += newCost.cost();
     $("h5#order").text(newBao.receipt());
     $("span#totalvalue").text(total);
     $(".jumbotron.receipt").slideDown();
