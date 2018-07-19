@@ -31,7 +31,7 @@ $(document).ready(function() {
     $("input:checkbox[name=extras]:checked").each(function() {
       var extraName = $(this).val();
       extrasTotal += 0.25;
-      extras.push(extraName + " ");
+      extras.push(" " + extraName);
     });
     var bun = $("input:radio[name=bun]:checked").val();
     var protein = $("input:radio[name=protein]:checked").val();
@@ -40,16 +40,18 @@ $(document).ready(function() {
     var newBao = new baoZi(bun, protein, extras, sauce, quantity);
     var newCost = new bzCost(extrasTotal, quantity);
     total += newCost.cost();
-    $("h5#order").text(newBao.receipt());
+    $("ul#order").append("<li><h6>" + newBao.receipt() + "</h6></li>");
     $("span#totalvalue").text(total);
     $(".jumbotron.receipt").slideDown();
     $("h3#total").show();
+  });
 //CUSTOM MESSAGE BASED ON TOTAL ORDER VALUE
+  $(".btn.confirm").click(function() {
     if (total <= 4.0) {
       $("h5#hungrytiger").hide();
       $("h5#respect").hide();
       $("h5#fee").show();
-    } else if (total >= 13) {
+    } else if (total >= 20) {
       $("h5#fee").hide();
       $("h5#respect").hide();
       $("h5#hungrytiger").show();

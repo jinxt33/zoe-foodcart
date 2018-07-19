@@ -16,6 +16,12 @@
   margin-top: 0px;
 }
 
+.btn.confirm, .btn.reset {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
 .jumbotron.footer {
   background-color: #696969;
 }
@@ -87,6 +93,10 @@ form#contact {
 p.thankyou {
   display: none;
   color: #8744DC;
+}
+
+h5#hungrytiger, h5#fee, h5#respect {
+  display: none;
 }
 
 h2 {
