@@ -47,7 +47,7 @@ $(document).ready(function() {
   });
 //CUSTOM MESSAGE BASED ON TOTAL ORDER VALUE
   $(".btn.confirm").click(function() {
-    if (total <= 4.0) {
+    if (total <= 4) {
       $("h5#hungrytiger").hide();
       $("h5#respect").hide();
       $("h5#fee").show();

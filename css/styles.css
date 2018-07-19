@@ -99,6 +99,10 @@ h5#hungrytiger, h5#fee, h5#respect {
   display: none;
 }
 
+h3#qty {
+  display: inline;
+}
+
 h2 {
   font-weight: bold;
 }
